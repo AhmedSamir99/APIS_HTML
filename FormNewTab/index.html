@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="results.html">
+        <div>
+            <input type="text"  id="Username" placeholder="Username" required pattern="[A-Za-z]{.2,}">
+            
+            <div for="Username" class="username">The required username may only be a series of alphabetical character</div>
+        </div>
+        <div>
+            <input type="email" id="email" placeholder="Email" required>
+            
+            <div for="email" class="email">The required email address may not include any special character other than the '@' sign</div>
+        </div>
+        <button onclick="SaveData()">Submit</button>
+    </form>
+    
+    <script>
+        function SaveData(){
+            var name = document.getElementById("Username").value;
+            var email = document.getElementById("email").value;
+            localStorage.setItem("Username",name);
+            localStorage.setItem("email",email);
+            
+        
+        }
+
+    </script>
+</body>
+</html>

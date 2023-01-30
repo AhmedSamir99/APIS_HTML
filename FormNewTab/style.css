@@ -1,0 +1,23 @@
+div{
+    padding: 10px;
+}
+
+input:focus {
+    /* border: 2px red solid; */
+    outline: red solid 2px;
+
+}
+
+#Username:valid+ .username,
+#email:valid+ .email {
+    display: none;
+}
+
+#resultsCard{   
+    
+    float: left;
+    border-radius: 10px;
+    border-color: black;
+    background-color: bisque;
+
+}
